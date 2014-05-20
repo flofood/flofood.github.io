@@ -1,7 +1,8 @@
 #exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 #paginate: 10
 #destination: /home/ben/git-repos/keithmillar.github.com
-pygments: true
+#pygments: true
+highlighter: true
 safe: false
 url: http://localhost:4000
 excerpt_separator: "{{ more }}"
