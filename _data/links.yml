@@ -1,0 +1,11 @@
+- url: /
+  title: Home
+
+- url: /about
+  title: About
+
+- url: /recipes
+  title: Recipes
+
+- url: /wine
+  title: Wine

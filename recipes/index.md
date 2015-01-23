@@ -1,0 +1,12 @@
+---
+layout: default 
+title: "Recipes"
+description: "A collection of our favorite recipes"
+---
+
+<!-- Column 1 start -->
+{% for post in site.categories.recipes %}
+<ul>
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+</ul>
+{% endfor %}
