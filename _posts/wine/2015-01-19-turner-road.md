@@ -7,12 +7,13 @@ tags:
 - merlot
 ---
 
-<!--start excerpt-->
+Price: Gift from McCoshs   
+Date: 29th December 2014  
+Supplier:  
+
 <div class="figure">
 <img src="/images/wine/turner-road-1.jpg ">
 </div>
-
-<!--more tag-->
 
 <div class="figure">
 <img src="/images/wine/turner-road-2.jpg">

@@ -4,13 +4,13 @@ title: "Ballybosch"
 description: ""
 category: Wine
 tags:
-- blend
+- "red blend"
 ---
 
-<!--start excerpt-->
-Ballybosch Red Blend £9.99
+Ballybosch Red Blend £9.99  
+28th October 2014  
+Direct Wine Shipments  
 
-<!--more tag-->
 New range from Local and International Rugby stars, Ruan Pienaar and Robbie Diack! Taking its name from ‘Bally’ meaning townland and ‘Bosch’ from Stellenbosch in South Africa
 
 <div class="figure">
