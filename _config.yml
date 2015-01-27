@@ -2,7 +2,7 @@ main_title: "Flo's Food and Drink"
 description: "Flo's Recipes and Wine we like"
 
 markdown: redcarpet
-highlighter: null
+highlighter: pygments
 permalink: /:title
 
 baseurl:
