@@ -1,12 +1,11 @@
 main_title: "Flo's Food and Drink"
 description: "Flo's Recipes and Wine we like"
 
-markdown: redcarpet
+# Conversion
 highlighter: pygments
-permalink: /:title
-
-baseurl:
-
+excerpt_separator: "{{ more }}"
+markdown_ext: markdown,mkd,mkdn,md
+markdown: redcarpet
 redcarpet:
   extensions: [strikethrough, tables]
 
@@ -14,10 +13,14 @@ sass:
   sass_dir: public/css
   style: :compressed
 
-
+# Serving
+port: 4000
+host: 0.0.0.0
+url:
+baseurl: "" # does not include hostname
+permalink: /:title
 
 # Where things are
-
 source:      .
 destination: ./_site
 plugins:     ./_plugins
@@ -26,20 +29,9 @@ data_source: ./_data
 collections: null
 
 #Handling Reading
-
 safe: false
 
-# Serving
 
-port: 4000
-host: 0.0.0.0
-url:
-baseurl: "" # does not include hostname
 
-# Conversion
 
-highlighter: true
-excerpt_separator: "{{ more }}"
-markdown_ext: markdown,mkd,mkdn,md
-markdown: redcarpet
 
