@@ -5,7 +5,8 @@ description: "Flo's Recipes and Wine we like"
 highlighter: pygments
 excerpt_separator: "{{ more }}"
 markdown_ext: markdown,mkd,mkdn,md
-markdown: redcarpet
+markdown: kramdown
+#markdown: redcarpet
 redcarpet:
   extensions: [strikethrough, tables]
 
@@ -22,11 +23,11 @@ permalink: /:title
 
 # Where things are
 source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-data_source: ./_data
-collections: null
+destination_dir: ./_site
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
+data_dir: ./_data
+#collections: null // this seems to break my sites
 
 #Handling Reading
 safe: false
