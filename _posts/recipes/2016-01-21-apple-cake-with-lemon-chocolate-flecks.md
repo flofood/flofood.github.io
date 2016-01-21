@@ -9,8 +9,6 @@ tags:
 - choclate
 ---
 
-Apple Cake with Lemon & Chocolate Flecks
-
 by Sarit Packer & Itamar Srulovich from Honey & Co. The Baking Book
 (Saltyard books)
 
