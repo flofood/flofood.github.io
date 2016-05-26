@@ -2,7 +2,7 @@
 layout: post
 title: "Martha Stewart's One Pot Tomato Pasta"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - tomatoes 
 ---

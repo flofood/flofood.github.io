@@ -2,7 +2,7 @@
 layout: post
 title: "Chicken Malay Rice"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - chicken
 ---

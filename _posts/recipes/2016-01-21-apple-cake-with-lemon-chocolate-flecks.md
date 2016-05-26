@@ -2,7 +2,7 @@
 layout: post
 title: "Apple Cake with Lemon & Chocolate Flecks"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - apples 
 - lemon

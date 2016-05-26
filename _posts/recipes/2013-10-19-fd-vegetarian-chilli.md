@@ -2,7 +2,7 @@
 layout: post
 title: "FD Vegetarian Chilli"
 description: ""
-category: Recipes
+category: recipes
 tags: 
 - vegetarian
 ---

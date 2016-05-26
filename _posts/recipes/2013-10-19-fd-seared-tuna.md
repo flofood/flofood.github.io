@@ -2,7 +2,7 @@
 layout: post
 title: "FD Seared Tuna"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - tuna
 ---

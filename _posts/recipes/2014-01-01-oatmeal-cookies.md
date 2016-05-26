@@ -2,7 +2,7 @@
 layout: post
 title: "Oatmeal Cookies"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - oats
 ---

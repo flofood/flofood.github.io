@@ -2,7 +2,7 @@
 layout: post
 title: "Oatmeal & Raisin Cookies"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - cookies
 ---

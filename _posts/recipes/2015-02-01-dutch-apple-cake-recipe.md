@@ -2,7 +2,7 @@
 layout: post
 title: "Dutch Apple Cake Recipe"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - apple 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "FD Mexican Pizza"
 description: ""
-category: Recipes
+category: recipes
 tags: 
 - pizza
 ---

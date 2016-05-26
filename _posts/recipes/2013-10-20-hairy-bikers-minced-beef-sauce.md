@@ -2,7 +2,7 @@
 layout: post
 title: "Hairy Bikers Minced Beef Sauce"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - beef
 ---

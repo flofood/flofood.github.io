@@ -2,7 +2,7 @@
 layout: post
 title: "Goats Cheese, Serrano Ham Tart, Parmesan Pastry"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - "goats cheese"
 - "serrano ham"

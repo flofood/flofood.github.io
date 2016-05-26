@@ -2,7 +2,7 @@
 layout: post
 title: "FD Roast Salmon"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - Salmon
 ---

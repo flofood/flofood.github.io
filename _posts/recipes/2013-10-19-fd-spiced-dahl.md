@@ -2,7 +2,7 @@
 layout: post
 title: "FD Spiced Dahl"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - dahl
 ---

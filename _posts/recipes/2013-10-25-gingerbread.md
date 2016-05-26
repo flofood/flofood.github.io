@@ -2,7 +2,7 @@
 layout: post
 title: "Gingerbread"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - baking
 ---

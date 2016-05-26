@@ -2,7 +2,7 @@
 layout: post
 title: "FD Roasted vegetable salad"
 description: ""
-category: Recipes
+category: recipes
 tags: 
 - vegetable
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Alice's Stew"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - stew
 ---

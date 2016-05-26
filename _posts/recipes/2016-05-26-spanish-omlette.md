@@ -2,7 +2,7 @@
 layout: post
 title: "Spanish Omlette"
 description: ""
-category: Recipes
+category: recipes
 tags:
 - eggs
 - potatoe 
