@@ -2,7 +2,7 @@ main_title: "Flo's Food and Drink"
 description: "Flo's Recipes and Wine we like"
 
 # Conversion
-highlighter: pygments
+highlighter: rouge
 excerpt_separator: "{{ more }}"
 markdown_ext: markdown,mkd,mkdn,md
 markdown: kramdown
