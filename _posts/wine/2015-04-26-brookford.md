@@ -2,7 +2,7 @@
 layout: post
 title: "Brookford"
 description: ""
-category: Wine
+category: wine
 tags:
 - shiraz
 - cabernet

@@ -2,7 +2,7 @@
 layout: post
 title: "Lindeman's Bin 50"
 description: ""
-category: Wine
+category: wine
 tags:
 - shiraz 
 ---

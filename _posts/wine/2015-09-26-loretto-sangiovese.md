@@ -2,7 +2,7 @@
 layout: post
 title: "Loretto Sangiovese"
 description: ""
-category: Wine
+category: wine
 tags:
 - sangiovese 
 ---

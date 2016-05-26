@@ -2,7 +2,7 @@
 layout: post
 title: "Rosso Puglia"
 description: ""
-category: Wine
+category: wine
 tags:
 - negroamaro 
 ---

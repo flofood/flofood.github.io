@@ -2,7 +2,7 @@
 layout: post
 title: "Moulin Montarels Pinot Noir"
 description: ""
-category: Wine
+category: wine
 tags:
 - merlot 
 - cabernet-sauvignon 

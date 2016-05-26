@@ -2,7 +2,7 @@
 layout: post
 title: "Finca Los Altos"
 description: ""
-category: Wine
+category: wine
 tags:
 - tempranillo
 ---

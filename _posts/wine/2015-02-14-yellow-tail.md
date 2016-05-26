@@ -2,7 +2,7 @@
 layout: post
 title: "Yellow Tail"
 description: ""
-category: Wine
+category: wine
 tags:
 - shiraz 
 ---

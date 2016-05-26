@@ -2,7 +2,7 @@
 layout: post
 title: "Montepulciano d'Abruzzo"
 description: ""
-category: Wine
+category: wine
 tags:
 - montepulciano
 ---

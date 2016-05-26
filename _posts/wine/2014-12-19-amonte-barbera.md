@@ -2,7 +2,7 @@
 layout: post
 title: "Amonte Barbera"
 description: ""
-category: Wine
+category: wine
 tags:
 - Barbera
 ---

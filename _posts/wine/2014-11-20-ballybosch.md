@@ -2,7 +2,7 @@
 layout: post
 title: "Ballybosch"
 description: ""
-category: Wine
+category: wine
 tags:
 - "red blend"
 ---

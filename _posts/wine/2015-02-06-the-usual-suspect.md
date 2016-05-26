@@ -2,7 +2,7 @@
 layout: post
 title: "The Usual Suspect"
 description: ""
-category: Wine
+category: wine
 tags:
 - "cabernet sauvignon"
 ---

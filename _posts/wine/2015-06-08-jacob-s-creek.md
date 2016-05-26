@@ -2,7 +2,7 @@
 layout: post
 title: "Jacob's Creek"
 description: ""
-category: Wine
+category: wine
 tags:
 - shiraz
 - cabernet

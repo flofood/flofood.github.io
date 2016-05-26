@@ -2,7 +2,7 @@
 layout: post
 title: "Hardys Legacy"
 description: ""
-category: Wine
+category: wine
 tags:
 - shiraz 
 - cabernet 

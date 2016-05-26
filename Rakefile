@@ -61,7 +61,7 @@ task :recipes do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
-    post.puts "category: Recipes"
+    post.puts "category: recipes"
     post.puts "tags:"
     post.puts "- Change Me"
     post.puts "---"
@@ -89,7 +89,7 @@ task :wine do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
-    post.puts "category: Wine"
+    post.puts "category: wine"
     post.puts "tags:"
     post.puts "- Change Me"
     post.puts "---"
