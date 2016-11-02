@@ -1,108 +1,125 @@
-#encoding: utf-8
-require 'rubygems'
-require 'jekyll'
-require 'rake'
-require 'yaml'
-require 'time'
+# coding: utf-8
 
-task :blog do
-  OptionParser.new.parse!
-  ARGV.shift
-  title = ARGV.join(' ')
+# CONFIGURATION VARIABLES (on top of those defined by Jekyll in _config(_deploy).yml)
+#
 
-  path = "_posts/2015/#{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')}.md"
+# MANAGING POSTS
+# Set the extension for new posts (defaults to .textile, if not set)
+#
+# $post_ext = ".textile"  # default
+# $post_ext = ".md"       # if you prefer markdown
+#
+# Set the location of new posts (defaults to "_posts/", if not set).
+# Please, terminate with a slash:
+#
+# $post_dir = "_posts/"
+#
+# --- NO NEED TO TOUCH ANYTHING BELOW THIS LINE ---
+#
 
-  if File.exist?(path)
-    puts "[WARN] File exists - skipping create"
-  else
-    File.open(path, "w") do |post|
-    #post.puts YAML.dump({'layout' => 'post', 'published' => false, 'title' => title})
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "category: Blog"
-    post.puts "tags:"
-    post.puts "- Change Me"
-    post.puts "---"
-    post.puts ""
-    post.puts "<!--start excerpt-->"
-    post.puts ""
-    post.puts ""
-    post.puts "{{ more }}"
-    post.puts ""
-    post.puts "{% highlight bash html linenos %}"
-    post.puts ""
-    post.puts "{% endhighlight %}"
-    post.puts ""
-    post.puts "<div class=\"figure\">"
-    post.puts "<img src=\" \">"
-    post.puts "</div>"
-    end
+# Specify default values for variables NOT set by the user
+
+$post_ext ||= ".md"
+$post_dir ||= "_posts/2016/"
+#
+# Tasks start here
+#
+puts "Correct syntax for a post is"
+puts "rake create_post[date,title,category,content]"
+puts "Categorys are blog wine recipes tech"
+
+desc 'Create a post'
+task :create_post, [:date, :title, :category, :content] do |t, args|
+  if args.title == nil then
+    puts "Error! title is empty"
+    puts "Usage: create_post[date,title,category,content]"
+    puts "DATE and CATEGORY are optional"
+    puts "DATE is in the form: YYYY-MM-DD; use nil or empty for today's date"
+    puts "CATEGORY is a string; nil or empty for no category"
+    exit 1
   end
-  #`subl #{path}`
-system ("#{ENV['EDITOR']} _posts/2015/#{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')}.md")
-  exit 1
+  if (args.date != nil and args.date != "nil" and args.date != "" and args.date.match(/[0-9]+-[0-9]+-[0-9]+/) == nil) then
+    puts "Error: date not understood"
+    puts "Usage: create_post[date,title,category,content]"
+    puts "DATE and CATEGORY are optional"
+    puts "DATE is in the form: YYYY-MM-DD; use nil or the empty string for today's date"
+    puts "CATEGORY is a string; nil or empty for no category"
+    puts ""
+
+    title = args.title || "title"
+
+    puts "Examples: create_post[\"\",\"#{args.title}\"]"
+    puts "          create_post[nil,\"#{args.title}\"]"
+    puts "          create_post[,\"#{args.title}\"]"
+    puts "          create_post[#{Time.new.strftime("%Y-%m-%d")},\"#{args.title}\"]"
+    exit 1
+  end
+
+  post_title = args.title
+  post_date = (args.date != "" and args.date != "nil") ? args.date : Time.new.strftime("%Y-%m-%d %H:%M:%S %Z")
+
+  # the destination directory is <<category>>/$post_dir, if category is non-nil
+  # and the directory exists; $post_dir otherwise (a category tag is added in
+  # the post body, in this case)
+  post_category = args.category
+  if post_category and Dir.exists?(File.join(post_category, $post_dir)) then
+    post_dir = File.join(post_category, $post_dir)
+    yaml_cat = nil
+  else
+    post_dir = $post_dir
+    yaml_cat = post_category ? "category: #{post_category}\n" : nil
+  end
+
+  def slugify (title)
+    # strip characters and whitespace to create valid filenames, also lowercase
+    return title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  end
+
+  filename = post_date[0..9] + "-" + slugify(post_title) + $post_ext
+
+  # generate a unique filename appending a number
+  i = 1
+  while File.exists?(post_dir + filename) do
+    filename = post_date[0..9] + "-" +
+               File.basename(slugify(post_title)) + "-" + i.to_s +
+               $post_ext 
+    i += 1
+  end
+
+  # the condition is not really necessary anymore (since the previous
+  # loop ensures the file does not exist)
+  if not File.exists?(post_dir + filename) then
+    File.open(post_dir + filename, 'w') do |f|
+      f.puts "---"
+      f.puts "layout: post"
+      f.puts "title: \"#{post_title}\""
+      f.puts "date: #{post_date}"
+      f.puts yaml_cat if yaml_cat != nil
+      f.puts "tags:"
+      f.puts " - change me"
+      f.puts "---"
+      f.puts ""
+      f.puts "<!--start excerpt-->"
+      f.puts ""
+      f.puts args.content if args.content != nil
+      f.puts ""
+      f.puts "{{ more }}"
+      f.puts ""
+      f.puts "<div class=\"figure\">"
+      f.puts "<img src=\"/images/2016/ \">"
+      f.puts "<br><strong>        <\/strong>"
+      f.puts "</div>"
+    end
+
+    puts "Post created under \"#{post_dir}#{filename}\""
+## line below removed as it caused errors
+    ##sh "open \"#{post_dir}#{filename}\"" if args.content == nil
+
+  else
+    puts "A post with the same name already exists. Aborted."
+  end
+  # puts "You might want to: edit #{$post_dir}#{filename}"
 end
 
-task :recipes do
-  OptionParser.new.parse!
-  ARGV.shift
-  title = ARGV.join(' ')
 
-  path = "_posts/recipes/#{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')}.md"
 
-  if File.exist?(path)
-    puts "[WARN] File exists - skipping create"
-  else
-    File.open(path, "w") do |post|
-    #post.puts YAML.dump({'layout' => 'post', 'published' => false, 'title' => title})
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "category: recipes"
-    post.puts "tags:"
-    post.puts "- Change Me"
-    post.puts "---"
-    post.puts ""
-    end
-  end
-  #`subl #{path}`
-system ("#{ENV['EDITOR']} _posts/recipes/#{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')}.md")
-  exit 1
-end
-
-task :wine do
-  OptionParser.new.parse!
-  ARGV.shift
-  title = ARGV.join(' ')
-
-  path = "_posts/wine/#{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')}.md"
-
-  if File.exist?(path)
-    puts "[WARN] File exists - skipping create"
-  else
-    File.open(path, "w") do |post|
-    #post.puts YAML.dump({'layout' => 'post', 'published' => false, 'title' => title})
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "category: wine"
-    post.puts "tags:"
-    post.puts "- Change Me"
-    post.puts "---"
-    post.puts ""
-    post.puts "Price: £"
-    post.puts "Date Purchased:"
-    post.puts "Supplier:"
-    post.puts "Region:"
-    post.puts ""
-    post.puts "![](/images/wine/ )"
-    end
-  end
-  #`subl #{path}`
-system ("#{ENV['EDITOR']} _posts/wine/#{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')}.md")
-  exit 1
-end
