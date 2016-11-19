@@ -20,7 +20,7 @@
 # Specify default values for variables NOT set by the user
 
 $post_ext ||= ".md"
-$post_dir ||= "_posts/2016/"
+$post_dir ||= "_posts/recipes/"
 #
 # Tasks start here
 #
