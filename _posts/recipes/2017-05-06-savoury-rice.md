@@ -2,7 +2,7 @@
 layout: post
 title: "Savoury Rice"
 date: 2017-05-06
-category: recipe
+category: recipes
 tags:
  - rice 
 ---
