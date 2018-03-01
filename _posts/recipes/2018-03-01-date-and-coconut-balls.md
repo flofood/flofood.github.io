@@ -8,8 +8,6 @@ tags:
  - coconut
 ---
 
-### Date and coconut balls recipe
-
 One of my go-to recipes that I can make up in bulk and grab before I head out the door is this one for date and coconut balls. You can freeze them as well which is a bonus, but they will keep for a couple of weeks in an airtight container in the fridge. Depends how delicious you find them – ahem...!!
 
  **Ingredients:**
