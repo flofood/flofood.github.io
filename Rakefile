@@ -104,11 +104,6 @@ task :create_post, [:date, :title, :category, :content] do |t, args|
       f.puts args.content if args.content != nil
       f.puts ""
       f.puts "{{ more }}"
-      f.puts ""
-      f.puts "<div class=\"figure\">"
-      f.puts "<img src=\"/images/2016/ \">"
-      f.puts "<br><strong>        <\/strong>"
-      f.puts "</div>"
     end
 
     puts "Post created under \"#{post_dir}#{filename}\""
