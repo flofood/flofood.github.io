@@ -15,7 +15,7 @@ tags:
 * 150g cup sugar
 * 75g butter, at room temperature
 * 1 egg, beaten
-* 300 cups flour
+* 300g flour
 * 1 teaspoon cinnamon
 * ½ teaspoon nutmeg
 * ½ teaspoon salt
