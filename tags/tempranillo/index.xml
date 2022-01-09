@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tempranillo on Flo&#39;s Food and Drink</title>
+    <link>/tags/tempranillo/</link>
+    <description>Recent content in tempranillo on Flo&#39;s Food and Drink</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Jul 2015 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tempranillo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finca Los Altos</title>
+      <link>/wine/2015-07-12-finca-los-altos/</link>
+      <pubDate>Sat, 11 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/wine/2015-07-12-finca-los-altos/</guid>
+      <description>Price: €9 (reduced from €18)
+Date Purchased: 11th July 2015
+Supplier: SuperValu, Murphy&amp;rsquo;s, Rosslare Harbour
+Region: Spain</description>
+    </item>
+    
+    <item>
+      <title>Albali</title>
+      <link>/wine/2015-01-19-albali/</link>
+      <pubDate>Tue, 28 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/wine/2015-01-19-albali/</guid>
+      <description>Price:
+Date Purchased:
+Supplier:</description>
+    </item>
+    
+  </channel>
+</rss>
